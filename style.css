@@ -18,7 +18,6 @@ body {
 .container {
     position: relative;
     background: linear-gradient(-45deg, #162c35 70%, #0c252f 100%);
-    /* min-height: 500px; */
     border-radius: 20px;
     border-top-left-radius: 255px;
     border-top-right-radius: 255px;
@@ -56,4 +55,20 @@ body {
     background: linear-gradient(-45deg, #162c35 70%, #0c252f 100%);
     border: 3px solid #fff;
     border-radius: 50%;
+}
+
+.clock span {
+    position: absolute;
+    inset: 20px;
+    color: #fff;
+    text-align: center;
+    transform: rotate(calc(30deg * var(--i)));
+}
+
+.clock span b {
+    font-size: 2em;
+    opacity: 0.25;
+    font-weight: 600px;
+    display: inline-block;
+    transform: rotate(calc(-30deg * var(--i)));
 }
