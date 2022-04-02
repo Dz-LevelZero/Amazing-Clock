@@ -55,6 +55,7 @@ body {
     background: linear-gradient(-45deg, #162c35 70%, #0c252f 100%);
     border: 3px solid #fff;
     border-radius: 50%;
+    z-index: 100;
 }
 
 .clock span {
@@ -71,4 +72,59 @@ body {
     font-weight: 600px;
     display: inline-block;
     transform: rotate(calc(-30deg * var(--i)));
+}
+
+.circle {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: 2px solid rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 11;
+}
+
+.circle i {
+    position: absolute;
+    width: 6px;
+    height: 50%;
+    background: var(--clr);
+    opacity: 0.75;
+    transform-origin: bottom;
+    transform: scaleY(0.5);
+}
+
+.circle:nth-child(1) i {
+    width: 2px;
+}
+
+.circle:nth-child(2) i {
+    width: 6px;
+}
+
+
+.circle2 {
+    width: 240px;
+    height: 240px;
+    z-index: 10;
+}
+
+.circle3 {
+    width: 180px;
+    height: 180px;
+    z-index: 9;
+}
+
+.circle::before {
+    content: '';
+    position: absolute;
+    top: -8.5px;
+    width: 15px;
+    height: 15px;
+    background: var(--clr);
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--clr),
+    0 0 60px var(--clr);
 }
